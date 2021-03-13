@@ -21,7 +21,6 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
 
-
     return Scaffold(
         body: Center(child: Image.asset('lib/assets/images/logo.png')));
   }

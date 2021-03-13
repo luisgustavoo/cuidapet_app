@@ -7,6 +7,6 @@ abstract class _AuthStoreBase with Store {
 
   @action
   Future<bool> isLogged() async {
-    return Future.value(true);
+    return false;
   }
 }
