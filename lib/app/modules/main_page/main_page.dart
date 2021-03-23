@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 
 import '../../../shared/auth_store.dart';
+import '../../../shared/theme_utils.dart';
 
 class MainPage extends StatelessWidget {
   MainPage() {
@@ -20,6 +21,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
+    ThemeUtils.init(context);
 
     return Scaffold(
         body: Center(child: Image.asset('lib/assets/images/logo.png')));

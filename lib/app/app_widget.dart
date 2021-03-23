@@ -9,7 +9,8 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: Get.addKey(Modular.navigatorKey),
-      title: 'Flutter Slidy',
+      title: 'Cuida Pet',
+      debugShowCheckedModeBanner: false,
       theme: ThemeCuidapet.theme(),
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
