@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../shared/components/facebook_button.dart';
 import '../../../shared/theme_utils.dart';
 import 'login_controller.dart';
 
@@ -123,7 +124,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                 ],
               ),
             ),
-            Text('FACEBOOK BUTTON'),
+            FacebookButton(),
+            TextButton(onPressed: () {}, child: Text('cadastre-se')),
           ],
         ),
       ),
