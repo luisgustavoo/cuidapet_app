@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -90,7 +92,12 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                     primary: ThemeUtils.primaryColor,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
-                onPressed: () {},
+                onPressed: () async {
+                  /*await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                      email: 'luisgustavovieirasantos@gmail.com',
+                      password: '123123');*/
+                  FacebookLogin().logIn(['public_profile', 'email']);
+                },
                 child: Text(
                   'Entrar',
                   style: TextStyle(fontSize: 20, color: Colors.white),
