@@ -1,5 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cuidapet_app/app/core/dio/custom_dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,7 +12,7 @@ import 'login_controller.dart';
 class LoginPage extends StatefulWidget {
   final String title;
 
-  const LoginPage({Key key, this.title = "Login"}) : super(key: key);
+  const LoginPage({Key key, this.title = 'Login'}) : super(key: key);
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -95,8 +96,11 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                 onPressed: () async {
                   /*await FirebaseAuth.instance.createUserWithEmailAndPassword(
                       email: 'luisgustavovieirasantos@gmail.com',
-                      password: '123123');*/
-                  FacebookLogin().logIn(['public_profile', 'email']);
+                      password: '123123');
+                  await FacebookLogin().logIn(['public_profile', 'email']);*/
+                  await CustomDio.authInstance
+                      .get('https://viacep.com.br/ws/01001000/json/ds')
+                      .then((response) => print(response.data));
                 },
                 child: Text(
                   'Entrar',
