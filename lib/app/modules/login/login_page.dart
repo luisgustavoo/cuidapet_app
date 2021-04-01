@@ -1,12 +1,9 @@
 import 'package:cuidapet_app/app/core/dio/custom_dio.dart';
+import 'package:cuidapet_app/app/shared/components/facebook_button.dart';
+import 'package:cuidapet_app/app/shared/theme_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../shared/components/facebook_button.dart';
-import '../../../shared/theme_utils.dart';
 import 'login_controller.dart';
 
 class LoginPage extends StatefulWidget {

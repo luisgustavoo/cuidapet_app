@@ -1,9 +1,9 @@
+import 'package:cuidapet_app/app/shared/auth_store.dart';
+import 'package:cuidapet_app/app/shared/theme_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 
-import '../../../shared/auth_store.dart';
-import '../../../shared/theme_utils.dart';
 
 class MainPage extends StatelessWidget {
   MainPage() {

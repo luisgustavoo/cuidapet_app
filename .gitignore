@@ -2,6 +2,7 @@
 .slidy/
 
 # Miscellaneous
+*.g.dart
 *.class
 *.log
 *.pyc
