@@ -1,9 +1,14 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
+import '../../repository/shared_prefs_repository.dart';
+
 class AuthInterceptorWrapper extends InterceptorsWrapper {
   @override
   Future onRequest(RequestOptions options) async {
+    final prefs = await SharedPrefsRepository.instance;
+    options.headers['Authorization'] = prefs.accessToken;
+
     if (DotEnv().env['profile'] == 'dev') {
       print('###### Request Log ######');
       print('url ${options.uri}');

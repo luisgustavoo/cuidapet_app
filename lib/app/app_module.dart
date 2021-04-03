@@ -3,10 +3,10 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../app/app_controller.dart';
 import '../app/modules/main_page/main_page.dart';
-import 'shared/auth_store.dart';
 import 'app_widget.dart';
 import 'modules/home/home_module.dart';
 import 'modules/login/login_module.dart';
+import 'shared/auth_store.dart';
 
 
 class AppModule extends MainModule {

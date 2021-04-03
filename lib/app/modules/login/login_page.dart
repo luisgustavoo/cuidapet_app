@@ -1,9 +1,10 @@
-import 'package:cuidapet_app/app/core/dio/custom_dio.dart';
-import 'package:cuidapet_app/app/shared/components/facebook_button.dart';
-import 'package:cuidapet_app/app/shared/theme_utils.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../shared/components/facebook_button.dart';
+import '../../shared/theme_utils.dart';
 import 'login_controller.dart';
 
 class LoginPage extends StatefulWidget {
@@ -95,9 +96,11 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                       email: 'luisgustavovieirasantos@gmail.com',
                       password: '123123');
                   await FacebookLogin().logIn(['public_profile', 'email']);*/
-                  await CustomDio.authInstance
+                  /*await CustomDio.authInstance
                       .get('https://viacep.com.br/ws/01001000/json/ds')
-                      .then((response) => print(response.data));
+                      .then((response) => print(response.data));*/
+                  /*final _fcm = FirebaseMessaging();
+                  print(await _fcm.getToken());*/
                 },
                 child: Text(
                   'Entrar',

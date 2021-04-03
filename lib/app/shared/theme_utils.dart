@@ -13,4 +13,5 @@ class ThemeUtils {
     primatyColorDark = theme.primaryColorDark;
     accentColor = theme.accentColor;
   }
+
 }
